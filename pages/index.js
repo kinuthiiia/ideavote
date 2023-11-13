@@ -141,7 +141,7 @@ export default function Home() {
           class=" h-[300px] md:h-[100vh] bg-[#3E90F3] relative"
         >
           <div>
-            <span class="bg-slate-600 text-white uppercase p-2 rounded-sm tracking-wider absolute z-20 left-[50%] translate-x-[-50%] translate-y-[50%] hidden md:visible">
+            <span class="bg-slate-600 text-white uppercase p-2 rounded-sm tracking-wider absolute z-20 left-[50%] translate-x-[-50%] translate-y-[50%]">
               easy to use interface
             </span>
             <img
@@ -152,31 +152,33 @@ export default function Home() {
           </div>
         </section>
 
-        <section class=" pl-6 md:pl-16 min-h-[700px] md:h-[93vh] ">
+        <section class="min-h-[700px] md:min-h-[500px]">
           <div class="md:flex my-[100px] justify-between md:space-x-12">
-            <div class="md:w-1/2 space-y-8 ">
+            <div class="pl-6 md:pl-16 md:w-1/2 space-y-8">
               <h1 class="text-[2rem] md:text-[2.5rem] font-semibold leading-[48px]">
                 Crafting solutions that speak to your audience
               </h1>
-              <p class="font-light text-left text-[1.3rem] dark:text-slate-400 ">
+              <p class="font-light text-left text-[1.2rem] dark:text-slate-400 ">
                 We help you listen to your customers and you make stuff they'll
                 love.
               </p>
-              <h1 class="text-[1.3rem] font-semibold md:pt-[120px]">
-                Over{" "}
-                <span class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text mr-1">
-                  1,000
-                </span>
-                ideas shared and voted on IdeaVote !🥳
-              </h1>
             </div>
-            <div class="md:w-1/2 mt-12 md:mt-0">
-              <img src="/morphed.png" />
+            <div class="md:w-1/2 w-[80%] mt-12 mx-auto">
+              <img src="/ideavote_home_dark.png" />
             </div>
           </div>
+          <h1 class="text-[1.3rem] font-semibold py-12  text-center w-full bg-black text-white">
+            Over{" "}
+            <span class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text mr-1">
+              1,000
+            </span>
+            ideas shared and voted on IdeaVote !🥳
+          </h1>
+          <br />
+          <br />
         </section>
 
-        <section id="about" class="h-[950px] md:h-[90vh]">
+        <section id="about" class="h-[1250px] md:h-[90vh]">
           <div class=" w-[90%] md:flex md:justify-between md:space-x-8 mx-auto space-y-12 md:space-y-0">
             <div class="space-y-4">
               <div class="w-[56px] h-[56px] rounded-md bg-gradient-to-tr from-blue-600 to-green-500 relative">
@@ -229,6 +231,24 @@ export default function Home() {
               <p class="font-light text-left text-[1.3rem] dark:text-slate-400">
                 Get immediate insights from your audience's , empowering you to
                 make informed decisions on the fly
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <div class="w-[56px] h-[56px] rounded-md bg-gradient-to-tr from-blue-600 to-green-500 relative">
+                <img
+                  src="/rss.svg"
+                  width="30px"
+                  class="top-[50%] translate-x-[50%] left-[50%] translate-y-[50%]"
+                  alt="simple"
+                />
+              </div>
+              <h1 class="text-[1.3rem] font-semibold ">RSS Feed Integration</h1>
+              <p class="font-light text-left text-[1.3rem] dark:text-slate-400">
+                Empower your users to stay updated with our RSS Feed. They'll
+                receive instant notifications about new ideas, comments, and app
+                updates, ensuring they're always part of the latest discussions
+                and innovations.
               </p>
             </div>
           </div>
@@ -298,14 +318,26 @@ export default function Home() {
         </section>
 
         <section>
-          <div class="relative h-[135vh] md:h-[100vh]">
+          <div class="relative h-[145vh] md:h-[100vh]">
             <img
               src="/quoted_bg.png"
-              class="absolute h-[134vh] md:w-full md:h-[100vh] object-cover"
+              class="absolute h-[145vh] md:w-full md:h-[100vh] object-cover"
               alt=""
             />
-            <div class=" space-y-12 md:space-y-0 absolute w-[70%] gap-12 left-[50%] translate-x-[-50%]  translate-y-[5%] md:translate-y-[50%]  md:flex md:justify-between">
-              <div class=" bg-white p-6 md:w-[33%] dark:bg-black">
+            <br />
+            <br />
+            <div className="w-[90%] mx-auto left-[50%] translate-x-[0%]">
+              <h1 className="text-center text-white text-[2rem] font-medium mb-1">
+                What our Early Supporters Are saying
+              </h1>
+              <p className="text-center text-black">
+                Thank you all for supporting and believing in IdeaVote from the
+                start!
+              </p>
+            </div>
+
+            <div class="space-y-12 md:space-y-0 absolute w-[70%] gap-12 left-[50%] translate-x-[-50%]  translate-y-[5%] md:translate-y-[20%]  md:flex md:justify-between">
+              <div class="rounded-xl bg-white p-6 md:w-[33%] dark:bg-black">
                 <img
                   src="/user_1.jpeg"
                   class="w-[56px] h-[56px] rounded-full object-cover mx-auto"
@@ -327,7 +359,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div class=" bg-white dark:bg-black p-6 md:w-[33%]">
+              <div class=" rounded-xl bg-white dark:bg-black p-6 md:w-[33%]">
                 <img
                   src="/user_2.jpeg"
                   class="w-[56px] h-[56px] rounded-full object-cover mx-auto"
@@ -349,7 +381,8 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div class=" bg-white p-6 md:w-[33%] dark:bg-black">
+
+              <div class=" rounded-xl bg-white p-6 md:w-[33%] dark:bg-black">
                 <img
                   src="/user_3.jpeg"
                   class="w-[56px] h-[56px] rounded-full object-cover mx-auto"
