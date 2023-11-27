@@ -17,15 +17,15 @@ export default function Home() {
   if (!mounted) return null;
 
   return (
-    <div className="dark:bg-black">
+    <div className="dark:bg-[#0A1C36]">
       <nav class="p-4 w-full">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div className="flex items-center justify-between py-1  md:block">
             <a href="/">
               {theme === "light" ? (
-                <img src="/ideavote_logo.jpg" alt="logo" width="130" />
+                <img src="/ideavote_logo.png" alt="logo" width="130" />
               ) : (
-                <img src="/ideavote_logo_dark.jpg" alt="logo" width="130" />
+                <img src="/ideavote_logo_dark.png" alt="logo" width="130" />
               )}
             </a>
 
@@ -78,7 +78,7 @@ export default function Home() {
               navbar ? "block" : "hidden"
             }`}
           >
-            <ul className=" ml-8 items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <ul className=" ml-8 items-center justify-end space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li>
                 <a href="#home" class="text-[#3E90F3]">
                   Home
@@ -108,9 +108,9 @@ export default function Home() {
       </nav>
 
       <main>
-        <section id="home" class=" h-[500px] md:h-[calc(100vh-120px)] relative">
-          <div class="space-y-5 top-[40%] w-[70%] mx-auto absolute translate-y-[-50%] left-[50%] translate-x-[-50%]">
-            <h1 class="text-[2.25rem] md:text-[3.5rem] font-semibold">
+        <section id="home" class=" h-[750px] md:h-[calc(100vh-120px)] relative">
+          <div class="space-y-5 top-[50%] w-[70%] mx-auto absolute translate-y-[-50%] left-[50%] translate-x-[-50%]">
+            <h1 class="text-[2.5rem] md:text-[4rem] font-bold leading:[48px] md:leading-[72px] justify-between">
               Transform idea into{" "}
               <span class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
                 action
@@ -118,7 +118,7 @@ export default function Home() {
               fast
             </h1>
 
-            <p class="font-light text-left md:text-[1.3rem] dark:text-slate-400">
+            <p class="font-regular text-left text-[1.2rem] dark:text-slate-300 text-slate-600">
               Our user-friendly platform lets you effortlessly gather, analyze,
               and leverage valuable customer insights to improve your products
               and services, fostering stronger customer relationships and a
@@ -133,6 +133,13 @@ export default function Home() {
                 Talk to sales
               </button>
             </div>
+            <h1 class="text-[1rem] font-semibold w-full ">
+              ✨ Over{" "}
+              <span class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text mr-1">
+                1,000
+              </span>
+              ideas shared and voted on IdeaVote !🥳
+            </h1>
           </div>
         </section>
 
@@ -140,47 +147,44 @@ export default function Home() {
           id="about"
           class=" h-[300px] md:h-[100vh] bg-[#3E90F3] relative"
         >
-          <div>
-            <span class="bg-slate-600 text-white uppercase p-2 rounded-sm tracking-wider absolute z-20 left-[50%] translate-x-[-50%] translate-y-[50%]">
+          <div className="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] w-[90%] md:w-[70%]">
+            <span class="hidden md:block bg-slate-600 text-white uppercase p-2 rounded-sm tracking-wider absolute z-20 left-[50%] translate-x-[-50%] translate-y-[-50%]">
               easy to use interface
             </span>
             <img
               src="/ideavote_home_light.jpg"
-              class=" w-[90%] md:w-[70%] absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]"
+              class="w-full"
               alt="easy_to_use"
             />
           </div>
         </section>
 
-        <section class="min-h-[700px] md:min-h-[500px]">
-          <div class="md:flex my-[100px] justify-between md:space-x-12">
-            <div class="pl-6 md:pl-16 md:w-1/2 space-y-8">
-              <h1 class="text-[2rem] md:text-[2.5rem] font-semibold leading-[48px]">
+        <section class="min-h-[400px] md:min-h-[500px]">
+          <div class="md:flex mt-[50px] mb-[0px] justify-between md:space-x-12">
+            <div class="px-6 md:mt-12 md:pl-16 md:w-[40%] space-y-6">
+              <h1 class="text-[2rem] md:text-[2.8rem] font-bold md:leading-[48px]">
                 Crafting solutions that speak to your audience
               </h1>
-              <p class="font-light text-left text-[1.2rem] dark:text-slate-400 ">
+              <p class="font-regular text-left text-[1.2rem] dark:text-slate-300 text-slate-600 ">
                 We help you listen to your customers and you make stuff they'll
                 love.
               </p>
             </div>
-            <div class="md:w-1/2 w-[80%] mt-12 mx-auto">
+            <div class="md:w-[60%] w-[80%] mt-12 md:mt-4 mx-auto">
               <img src="/ideavote_home_dark.png" />
             </div>
           </div>
-          <h1 class="text-[1.3rem] font-semibold py-12  text-center w-full bg-black text-white">
-            Over{" "}
-            <span class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text mr-1">
-              1,000
-            </span>
-            ideas shared and voted on IdeaVote !🥳
-          </h1>
+
           <br />
           <br />
         </section>
 
-        <section id="about" class="h-[1250px] md:h-[90vh]">
-          <div class=" w-[90%] md:flex md:justify-between md:space-x-8 mx-auto space-y-12 md:space-y-0">
-            <div class="space-y-4">
+        <section
+          id="about"
+          class="mt-[-70px] relative bg-[url('/greenish_bg.png')] bg-no-repeat bg-cover py-6"
+        >
+          <div class=" w-[90%] md:grid md:grid-cols-4 md:gap-16 mx-auto space-y-12 md:space-y-0">
+            <div class="space-y-4 col-span-1">
               <div class="w-[56px] h-[56px] rounded-md bg-gradient-to-tr from-blue-600 to-green-500 relative">
                 <img
                   src="/simple.svg"
@@ -189,16 +193,14 @@ export default function Home() {
                   alt="simple"
                 />
               </div>
-              <h1 class="text-[1.3rem] font-semibold ">
-                Simple Idea Submission
-              </h1>
-              <p class="font-light text-left text-[1.3rem] dark:text-slate-400">
+              <h1 class="text-[1.5rem] font-bold ">Simple Idea Submission</h1>
+              <p class="font-regular text-left text-[1.2rem] dark:text-slate-300 text-slate-600">
                 Just a few clicks, and your customers are one step closer to
-                making a difference
+                making a difference.
               </p>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-4 col-span-1">
               <div class="w-[56px] h-[56px] rounded-md bg-gradient-to-tr from-blue-600 to-green-500 relative">
                 <img
                   src="/community.svg"
@@ -207,16 +209,16 @@ export default function Home() {
                   alt="simple"
                 />
               </div>
-              <h1 class="text-[1.3rem] font-semibold ">
+              <h1 class="text-[1.5rem] font-bold ">
                 Community Feedback Integration
               </h1>
-              <p class="font-light text-left text-[1.3rem] dark:text-slate-400">
+              <p class="font-regular text-left text-[1.2rem] dark:text-slate-300 text-slate-600">
                 Incorporate collective wisdom of your audience directly into
-                your decisionmaking process
+                your decisionmaking process.
               </p>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-4 col-span-1">
               <div class="w-[56px] h-[56px] rounded-md bg-gradient-to-tr from-blue-600 to-green-500 relative">
                 <img
                   src="/realtime.svg"
@@ -225,16 +227,16 @@ export default function Home() {
                   alt="simple"
                 />
               </div>
-              <h1 class="text-[1.3rem] font-semibold ">
+              <h1 class="text-[1.5rem] font-bold ">
                 Real-time Voting Analytics
               </h1>
-              <p class="font-light text-left text-[1.3rem] dark:text-slate-400">
+              <p class="font-regular text-left text-[1.2rem] dark:text-slate-300 text-slate-600">
                 Get immediate insights from your audience's , empowering you to
-                make informed decisions on the fly
+                make informed decisions on the fly.
               </p>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-4 col-span-1">
               <div class="w-[56px] h-[56px] rounded-md bg-gradient-to-tr from-blue-600 to-green-500 relative">
                 <img
                   src="/rss.svg"
@@ -243,8 +245,8 @@ export default function Home() {
                   alt="simple"
                 />
               </div>
-              <h1 class="text-[1.3rem] font-semibold ">RSS Feed Integration</h1>
-              <p class="font-light text-left text-[1.3rem] dark:text-slate-400">
+              <h1 class="text-[1.5rem] font-bold ">RSS Feed Integration</h1>
+              <p class="font-regular text-left text-[1.2rem] dark:text-slate-300 text-slate-600">
                 Empower your users to stay updated with our RSS Feed. They'll
                 receive instant notifications about new ideas, comments, and app
                 updates, ensuring they're always part of the latest discussions
@@ -253,8 +255,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div class="mt-[100px] w-4/5 mx-auto">
-            <p class="font-medium text-center text-[1rem]  ">
+          <div class="mt-[50px] w-4/5 mx-auto">
+            <p class="font-medium text-center text-[1rem] uppercase tracking-wider">
               Trusted by leading companies
             </p>
             <div class="w-[300px] md:w-[400px] grid-cols-4 mt-[56px] grid mx-auto">
@@ -271,38 +273,49 @@ export default function Home() {
         </section>
 
         <section id="pricing">
+          <div class="px-6 md:mt-12 md:pl-16 md:w-full space-y-6 mt-12">
+            <h1 class="text-[2rem] md:text-[2.8rem] font-bold md:leading-[48px] w-full text-center">
+              Pricing
+            </h1>
+            <p class="font-regular text-left text-[1.2rem] dark:text-slate-300 text-slate-600 md:w-2/3 mx-auto text-center ">
+              IdeaVote sets up everything you need to start collecting and
+              analyzing insights. Gone are the times when you spent days to get
+              this done.
+            </p>
+          </div>
+
           <div class="space-y-12 md:space-y-0 w-[70%] md:w-[50%]  mx-auto my-[100px] md:flex md:space-x-[48px]">
-            <div class="md:w-1/2 rounded-lg bg-[rgba(0,0,0,0.2)] dark:bg-white p-6">
-              <h3 class="font-bold text-[1.2rem] dark:text-black">
+            <div class="md:w-1/2 rounded-lg bg-[rgba(0,0,0,0.2)] dark:bg-black p-6">
+              <h3 class="font-bold text-[1.5rem] dark:text-white">
                 Basic Plan
               </h3>
               <br />
-              <p class="font-light text-left dark:text-slate-800">
+              <p class="font-regular text-left text-[1.2rem] dark:text-slate-300 text-slate-600">
                 Collect feedback directly from your customers, and keep them
                 engaged with questions and status updates.
               </p>
               <br />
               <br />
 
-              <h3 class="font-bold text-[1.2rem] dark:text-black">
+              <h3 class="font-bold text-[1.2rem] dark:text-white">
                 $25{" "}
-                <span class="font-light text-left dark:text-slate-800">
+                <span class="font-light text-left dark:text-slate-300 text-slate-800">
                   /month
                 </span>
               </h3>
               <br />
               <br />
-              <button class="outline-none bg-black px-6 py-2 text-white rounded-md font-medium w-full">
+              <button class="outline-none bg-white px-6 py-2 text-black rounded-md font-medium w-full">
                 Get started
               </button>
             </div>
 
-            <div class="md:w-1/2 rounded-lg  bg-[rgba(0,0,0,0.2)] dark:bg-white relative p-6">
-              <h3 class="font-bold text-[1.2rem] dark:text-black">
+            <div class="md:w-1/2 rounded-lg  bg-[rgba(0,0,0,0.2)] dark:bg-black relative p-6">
+              <h3 class="font-bold text-[1.5rem] dark:text-white">
                 Enterprise
               </h3>
               <br />
-              <p class="font-light text-left dark:text-slate-800">
+              <p class="font-regular text-left text-[1.2rem] dark:text-slate-300 text-slate-600">
                 Contact sales for an enterprise plan.
               </p>
               <br />
@@ -310,7 +323,7 @@ export default function Home() {
 
               <br />
               <br />
-              <button class="absolute bottom-6 outline-none bg-black px-6 py-2 text-white rounded-md font-medium w-[83%]">
+              <button class="absolute bottom-6 outline-none bg-white px-6 py-2 text-black rounded-md font-medium w-[83%]">
                 Contact sales
               </button>
             </div>
@@ -320,19 +333,20 @@ export default function Home() {
         <section>
           <div class="relative h-[145vh] md:h-[100vh]">
             <img
-              src="/quoted_bg.png"
+              src="/greenish_bg.png"
               class="absolute h-[145vh] md:w-full md:h-[100vh] object-cover"
               alt=""
             />
             <br />
             <br />
             <div className="w-[90%] mx-auto left-[50%] translate-x-[0%]">
-              <h1 className="text-center text-white text-[2rem] font-medium mb-1">
-                What our Early Supporters Are saying
+              <h1 class="text-[2rem] md:text-[2.8rem] font-bold md:leading-[48px]">
+                What our early supporters are saying
               </h1>
-              <p className="text-center text-black">
+              <br />
+              <p class="font-regular text-left text-[1.2rem] dark:text-slate-300 text-slate-600 ">
                 Thank you all for supporting and believing in IdeaVote from the
-                start!
+                start!✊
               </p>
             </div>
 
@@ -407,14 +421,71 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section>
+          <div class="px-6 md:mt-12 md:pl-16 md:w-full space-y-6 mt-12">
+            <h1 class="text-[2rem] md:text-[2.8rem] font-bold md:leading-[48px] w-full text-center">
+              Frequently Asked Questions
+            </h1>
+            <p class="font-regular text-[1.2rem] dark:text-slate-300 text-slate-600 md:w-2/3 mx-auto text-center ">
+              Looking to learn more about IdeaVote? Here are some of the most
+              common questions we get asked. If you have additional questions,
+              please feel free to{" "}
+              <a href="#contact" className="underline">
+                contact us!
+              </a>
+            </p>
+          </div>
+
+          <div className="mt-12 w-4/5 grid md:grid-cols-2 gap-16 grid-cols-1 mx-auto  mb-12">
+            <div className="col-span-1">
+              <h2 className="text-[1.2rem] font-bold">
+                What is Shipixen exactly?
+              </h2>
+              <p className="font-regular text-[1.2rem] dark:text-slate-300 text-slate-600  mx-auto text-left ">
+                Shipixen is an app that generates boilerplate code with your
+                branding. You get the git repository & can modify the code as
+                you want.
+              </p>
+            </div>
+            <div className=" col-span-1">
+              <h2 className="text-[1.2rem] font-bold">
+                What do I get if I pre-order?
+              </h2>
+              <p className="font-regular text-[1.2rem] dark:text-slate-300 text-slate-600  mx-auto text-left ">
+                With the pre-order, you get a 50% discount on the final price
+                and a 1-year license. You are also one of the first to get
+                access to the app when it comes out.
+              </p>
+            </div>
+            <div className="col-span-1">
+              <h2 className="text-[1.2rem] font-bold">
+                How does the license work?
+              </h2>
+              <p className="font-regular text-[1.2rem] dark:text-slate-300 text-slate-600  mx-auto text-left ">
+                The license is valid for one year. After that, you can renew it
+                if you want to keep using Shipixen.
+              </p>
+            </div>
+            <div className=" col-span-1">
+              <h2 className="text-[1.2rem] font-bold">
+                How many websites can I generate?
+              </h2>
+              <p className="font-regular text-[1.2rem] dark:text-slate-300 text-slate-600  mx-auto text-left ">
+                If you have a license, you can generate as many websites as you
+                want.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer>
+      <footer class="bg-[url('/greenish_bg.png')] bg-no-repeat bg-cover">
         <div class="md:flex md:justify-between p-[50px] gap-x-12">
           <div class="space-y-6 md:w-1/3 ">
             {theme === "light" ? (
-              <img src="/ideavote_logo.jpg" alt="logo" width="130" />
+              <img src="/ideavote_logo.png" alt="logo" width="130" />
             ) : (
-              <img src="/ideavote_logo_dark.jpg" alt="logo" width="130" />
+              <img src="/ideavote_logo_dark.png" alt="logo" width="130" />
             )}
 
             <p class="font-light text-left ml-4">
